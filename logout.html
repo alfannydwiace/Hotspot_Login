@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+MaxHotspot (c) 2019. Maxindo Mitra Solusi. Research and Development
+Last Revision: 10 Mei 2019 13:00
+-->
+<html lang="en" dir="ltr">
+    <!--
+    <?xml version="1.0" encoding="UTF-8"?>
+    <WISPAccessGatewayParam xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://hotspot.maxindo.net.id/WISPAccessGatewayParam.xsd">
+                                    <Redirect>
+                                                                    <AccessProcedure>1.0</AccessProcedure>
+                                                                    <AccessLocation>MaxHotspot</AccessLocation>
+                                                                    <LocationName>MaxHotspot</LocationName>
+                                                                    <LoginURL>$(link-login)</LoginURL>
+                                                                    <AbortLoginURL>$(link-logout)</AbortLoginURL>
+                                                                    <MessageType>100</MessageType>
+                                                                    <ResponseCode>0</ResponseCode>
+                                    </Redirect>
+    </WISPAccessGatewayParam> -->
+    <head>
+        <meta charset="windows-1252">
+        <meta name="description" content="Login Portal for MaxHotspot">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+        <title>MaxHotspot - Zuri Express Jimbaran Bali </title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+                                <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+                                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->        
+
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <script src="js/jquery-2.2.3.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/notify.min.js"></script>
+        <script src="md5.js"></script>
+
+        <style>
+            body {
+                background: url(img/background.jpg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: 100% 100%;
+            }
+        </style>
+
+    </head>
+    <body class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+                &nbsp;
+            </div>            
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align: center; background: rgba(255,255,255, 0.8)">
+                <h3>ZURI EXPRESS</h3>
+                <p>Jimbaran Bali</p>
+
+                <p>You have just logged out.</p>
+                <table class='table'>
+                    <tr>
+                        <td>IP address:</td>
+                        <td>$(ip)</td>
+                    </tr>
+                    <tr>
+                        <td>MAC Address:</td>
+                        <td>$(mac)</td>
+                    </tr>
+                    <tr>
+                        <td>bytes up/down:</td>
+                        <td>$(bytes-in-nice) / $(bytes-out-nice)</td>
+                    </tr>
+                    <tr>
+                        <td>connected:</td>
+                        <td>$(uptime)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <a href="$(link-login)"><span class="fa fa-sign-in"></span> Sign In</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+                &nbsp;
+            </div>            
+        </div>
+    </body>
+</html>
